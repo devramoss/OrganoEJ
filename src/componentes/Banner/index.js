@@ -1,9 +1,9 @@
 import "./Banner.css";
 
-function Banner() {
+const Banner = () => {
     return (
         <header className="banner">
-            <img src="./imagens/banner.png" alt="Banner da aplicação OrganoEJ"/>
+            <img src="./imagens/banner.png" alt="Banner principal da aplicação OrganoEJ"/>
         </header>
     );
 }
