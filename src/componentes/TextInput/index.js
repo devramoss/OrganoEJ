@@ -1,12 +1,12 @@
 import "./TextInput.css";
 
-const TextInput = () => {
+const TextInput = (props) => {
     return (
         <div className="text-input">
             <label>
-                Nome
+                {props.label}
             </label>
-            <input placeholder="Digite o seu nome"/>
+            <input placeholder={props.placeholder}/>
         </div>
     );
 }
