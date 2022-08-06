@@ -4,7 +4,7 @@ import DropdownList from "../DropdownList";
 import TextInput from "../TextInput";
 import "./Form.css";
 
-const Form = () => {
+const Form = (props) => {
     const department = [
         "Administrativo",
         "Comercial",
@@ -19,9 +19,19 @@ const Form = () => {
     const [image, setImage] = useState("");
     const [accessor, setAccessor] = useState("");
 
+    const whenSaving = (event) => {
+        event.preventDefault();
+        props.toNewCollaboratorAdded({
+            name,
+            position,
+            image,
+            accessor
+        })
+    }
+
     return (
         <section className="form-container">
-            <form>
+            <form onSubmit={whenSaving}>
                 <h2>
                     Preencha os dados para criar o card do acessor
                 </h2>
